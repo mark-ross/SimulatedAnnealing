@@ -11,7 +11,8 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
 
-mainClassName = 'org.markross.simuanneal.SimulatedAnnealing'
+//mainClassName = 'org.markross.simuanneal.SimulatedAnnealing'
+mainClassName = 'org.markross.simuanneal.examples.FourVariable'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
