@@ -67,7 +67,7 @@ public class SimulatedAnnealing<T> {
 
     // optimize!
     while(temperature > 0) {
-      System.out.println("Iteration #" + iterationCounter++ + " -- temperature: " + temperature);
+      System.out.println("Iteration #" + (iterationCounter++) + " -- temperature: " + temperature);
       // calculate energy
       currentEnergy = dataInterface.costCalculation(current);
 
@@ -83,7 +83,7 @@ public class SimulatedAnnealing<T> {
         }
 
       } else {
-        double probability = Math.pow(Math.E, (currentEnergy-previousEnergy)/temperature);
+        double probability = Math.exp(-(currentEnergy-previousEnergy)/temperature);
         if( probability > random.nextDouble()) {
           previousEnergy = currentEnergy;
           previous = current;
